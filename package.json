@@ -8,7 +8,9 @@
     "watch": "webpack --watch",
     "server": "webpack-dev-server --inline --colors --display-error-details --display-cached ",
     "start": "npm install && npm run server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,8 @@
     "reflect-metadata": "^0.1.0",
     "rtts_assert": "2.0.0-alpha.26",
     "rx": "^2.5.3",
-    "zone.js": "^0.5.0"
+    "zone.js": "^0.5.0",
+    "snyk": "^1.82.1"
   },
   "devDependencies": {
     "css-loader": "^0.14.4",
@@ -42,5 +45,6 @@
     "url-loader": "^0.5.5",
     "webpack": "^1.9.6",
     "webpack-dev-server": "^1.8.2"
-  }
+  },
+  "snyk": true
 }
